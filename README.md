@@ -48,3 +48,46 @@ To deploy the project, use
 ```bash
 npm run build
 ```
+
+SVG
+
+```<svg>
+  <use xlink:href="/__spritemap#sprite-spiriit"></use>
+</svg>
+```
+
+Img
+
+You need to add the suffix -view to access to the fragment.
+
+```javascript
+<img src="/__spritemap#sprite-spiriit-view" />
+```
+
+
+```javascript
+// main.scss
+@import './spritemap.scss';
+```
+
+Use for backend integration
+
+ViteJS allows to be use to serve assets. So, you can connect ViteJS with Wordpress, Drupal or any kind of backend.
+
+Important
+
+To make vite-plugin-svg-spritemap works with this kind of environnment, you will need to handle the right url inside your backend if you are on dev or build.
+
+For example, with <use> on dev, using direcly the id of the svg (with the injectSVGOnDev option).
+
+```javascript
+<svg>
+  <use xlink:href="#sprite-spiriit"></use>
+</svg>
+```
+
+And in prod, by putting the correct URL manually thanks to the manifest.json file information :
+
+<svg>
+  <use xlink:href="https://my-cool-website.com/dist/assets/spritemap.95b4c41a.svg#sprite-spiriit"></use>
+</svg>
