@@ -45,7 +45,6 @@ export default defineConfig(({command}) => {
         },
         build:   {
             sourcemap:     true,
-            cssMinify:     'esbuild',
             rollupOptions: {
                 input:  glob.sync('./src/*.html'),
                 output: {
