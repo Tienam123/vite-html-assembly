@@ -11,12 +11,14 @@
 @import "vendor/mixins";
 @import "vendor/variables";
 @import "vendor/colors-pallete";
+@import "vendor/fonts";
+@import "fonts/icons";
+@import "spritemap";
 
 //-----------------------------------/ Fonts /---------------------------------------
 
 //@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
 //&display=swap - добавить при подключении через плагин
-//@import "vendor/fonts";
 
 //-----------------------------------/ Settings /---------------------------------------
 
@@ -53,6 +55,9 @@ body {
 	.lock & {
 		overflow: hidden;
 		touch-action: none;
+	}
+	&.locked {
+		overflow: hidden;
 	}
 	// Сайт загружен
 	.loaded & {

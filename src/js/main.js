@@ -1,7 +1,3 @@
-import '../scss/style.scss'
-const genenrateData = () => {
-    return 1;
-};
-const getData = '';
-genenrateData();
-console.log('asdsdas')
+const blockScroll = () => {
+  document.body.classList.toggle('lock')
+}
